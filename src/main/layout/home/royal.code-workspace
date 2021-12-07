@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../royalInvest-backend"
+		},
+		{
+			"path": "../../../../../robot44-frontend-deploy"
+		}
+	],
+	"settings": {}
+}
