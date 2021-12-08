@@ -43,7 +43,7 @@ const Testimonial = () => (
             <p className='testimonial__text'>
                 In my history of working with Bitcoin investment companies, I
                 can honestly say that there is not one company that I've ever
-                worked with that has better service than royalinvestmentcoin
+                worked with that has better service than fxcryptotokeninvestment
             </p>
             <div className='testimonial__rating'>
                 <AiFillStar className='testimonial__rating--star' />
@@ -64,8 +64,8 @@ const Testimonial = () => (
             <h2 className='testimonial__name'>Micheal Dalton</h2>
             <p className='testimonial__location'>United States</p>
             <p className='testimonial__text'>
-                royalinvestmentcoin is above and beyond their competitors. They
-                follow up promptly on my account enquiries and resolve any
+                fxcryptotokeninvestment is above and beyond their competitors.
+                They follow up promptly on my account enquiries and resolve any
                 issues within 24 hours. I'm glad to do business with them
             </p>
 

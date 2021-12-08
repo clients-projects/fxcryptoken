@@ -6,7 +6,6 @@ import { ImLocation2 } from 'react-icons/im'
 import { IoLogoWhatsapp } from 'react-icons/io'
 
 function Footer() {
-
     const year = new Date().getFullYear()
     return (
         <>
@@ -66,8 +65,8 @@ function Footer() {
 
             <div className='footer__copyright'>
                 <p className='footer__copy'>
-                    copyright &copy; {year} royalInvestmentCoin.com all rights
-                    reserved
+                    copyright &copy; {year} fxcryptotokeninvestment.com all
+                    rights reserved
                 </p>
             </div>
         </>

@@ -34,8 +34,8 @@ function WhyChooseUs() {
                         Experienced Management
                     </h2>
                     <h3 className='whyChooseUs__text'>
-                        royalInvestmentCoin.com is managed by a team with years
-                        of experience{' '}
+                        fxcryptotokeninvestment.com is managed by a team with
+                        years of experience{' '}
                     </h3>
                 </div>
                 <div className='whyChooseUs__box'>

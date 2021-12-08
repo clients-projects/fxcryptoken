@@ -177,14 +177,17 @@ function SubHeader(props) {
 
                 <MdEmail className='subHeader__contact--logo' />
                 <p className='subHeader__contact--text'>
-                    support@royalInvestmentCoin.com
+                    support@fxcryptotokeninvestment.com
                 </p>
             </div>
 
             <nav className='subHeader__nav'>
                 <Link className='subHeader__logo' to='/'>
-
-                <img src={LogoName} alt='logoname' className='subHeader__logo--item'/>
+                    <img
+                        src={LogoName}
+                        alt='logoname'
+                        className='subHeader__logo--item'
+                    />
                 </Link>
                 <ul className='subHeader__list'>
                     <Link to='/' className='subHeader__list--item'>

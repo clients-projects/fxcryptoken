@@ -18,7 +18,7 @@ function Header() {
                 Large auctions. Huge profit
             </h3>
             <h1 className='heading-1 main-header__title'>
-                Welcome to royalInvestmentCoin.com
+                Welcome to fxcryptotokeninvestment.com
             </h1>
 
             <div className='main-header__cta'>

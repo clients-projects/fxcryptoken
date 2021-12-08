@@ -96,7 +96,7 @@ class Admin extends Component {
             }
         }
         const pathRoute = path.slice(7)
-        return pathRoute ? pathRoute : 'royalinvestmentcoin'
+        return pathRoute ? pathRoute : 'fxcryptotokeninvestment'
     }
     handleImageClick = (image) => {
         this.setState({ image: image })
@@ -139,8 +139,8 @@ class Admin extends Component {
             title: <span data-notify='icon' className='pe-7s-gift' />,
             message: (
                 <div>
-                    Welcome to <b>royalinvestmentcoin Dashboard</b> - The most
-                    advanced trading platform
+                    Welcome to <b>fxcryptotokeninvestment Dashboard</b> - The
+                    most advanced trading platform
                 </div>
             ),
             level: level,
@@ -192,7 +192,6 @@ class Admin extends Component {
                         )}
                     />
                     <Switch>
-                      
                         <Route
                             path='/admin/plan-confirmation/:id'
                             component={PlanConfirmation}

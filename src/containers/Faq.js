@@ -12,20 +12,20 @@ const Faq = () => {
                 <div className='faq__content'>
                     <div className='faq__content--1'>
                         <p className='faq__content--question'>
-                            Is royalInvestmentCoin.com a registered company?
+                            Is fxcryptotokeninvestment.com a registered company?
                         </p>
                         <p className='faq__content--answer'>
-                            Yes, royalInvestmentCoin.com is registered in the UK
-                            as "royalInvestmentCoin.com".
+                            Yes, fxcryptotokeninvestment.com is registered in
+                            the UK as "fxcryptotokeninvestment.com".
                         </p>
                         <p className='faq__content--question'>
-                            How can I invest with royalInvestmentCoin.com?
+                            How can I invest with fxcryptotokeninvestment.com?
                         </p>
                         <p className='faq__content--answer'>
                             To make a investment you must first become a member
-                            of royalInvestmentCoin.com. Once you are signed up,
-                            you can make your first deposit. All deposits must
-                            be made through the Members Area. You can login
+                            of fxcryptotokeninvestment.com. Once you are signed
+                            up, you can make your first deposit. All deposits
+                            must be made through the Members Area. You can login
                             using the member username and password you
                             registered with.
                         </p>
@@ -63,13 +63,13 @@ const Faq = () => {
                             investments.
                         </p>
                         <p className='faq__content--question'>
-                            How can I invest with royalInvestmentCoin.com?
+                            How can I invest with fxcryptotokeninvestment.com?
                         </p>
                         <p className='faq__content--answer'>
                             To make a investment you must first become a member
-                            of royalInvestmentCoin.com. Once you are signed up,
-                            you can make your first deposit. All deposits must
-                            be made through the Members Area. You can login
+                            of fxcryptotokeninvestment.com. Once you are signed
+                            up, you can make your first deposit. All deposits
+                            must be made through the Members Area. You can login
                             using the member username and password you
                             registered with.
                         </p>
@@ -79,7 +79,7 @@ const Faq = () => {
                         </p>
                         <p className='faq__content--answer'>
                             These funds are managed by a team of
-                            royalInvestmentCoin.com investment experts.
+                            fxcryptotokeninvestment.com investment experts.
                         </p>
                     </div>
                     <div className='faq__content--2'>
@@ -103,9 +103,9 @@ const Faq = () => {
                         </p>
                         <p className='faq__content--answer'>
                             To make a spend you must first become a member of
-                            royalInvestmentCoin.com . Once you are signed up,
-                            you can make your first spend. All spends must be
-                            made through the Member Area. You can login using
+                            fxcryptotokeninvestment.com . Once you are signed
+                            up, you can make your first spend. All spends must
+                            be made through the Member Area. You can login using
                             the member username and password you used to signup.
                         </p>
                         <p className='faq__content--question'>
@@ -119,9 +119,9 @@ const Faq = () => {
                             How can I change my e-mail address or password?
                         </p>
                         <p className='faq__content--answer'>
-                            Log into your royalInvestmentCoin.com account and
-                            click on the "Profile". You can change your e-mail
-                            address and password there.
+                            Log into your fxcryptotokeninvestment.com account
+                            and click on the "Profile". You can change your
+                            e-mail address and password there.
                         </p>
                         <p className='faq__content--question'>
                             What if I can't log into my account because I forgot
@@ -137,12 +137,12 @@ const Faq = () => {
                         </p>
                         <p className='faq__content--answer'>
                             No, profits are gathered on your
-                            royalInvestmentCoin.com account and you can withdraw
-                            them anytime.
+                            fxcryptotokeninvestment.com account and you can
+                            withdraw them anytime.
                         </p>
                         <p className='faq__content--question'>
                             Can I make an additional deposit to
-                            royalInvestmentCoin.com account once it has been
+                            fxcryptotokeninvestment.com account once it has been
                             opened?
                         </p>
                         <p className='faq__content--answer'>

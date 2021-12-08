@@ -4,11 +4,11 @@ function StoryContent() {
     return (
         <>
             <h3 className='heading-1 story__header mb-sm'>
-                Welcome to royalInvestmentCoin.com
+                Welcome to fxcryptotokeninvestment.com
             </h3>
 
             <p className='story__text'>
-                royalinvestmentcoin is a global Bitcoin investment website
+                fxcryptotokeninvestment is a global Bitcoin investment website
                 dedicated to building trust by trading and growing our clients
                 crypto assets in partnership with financial professionals and
                 institutions worldwide. We have been operating since 2019 with

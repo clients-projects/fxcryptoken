@@ -6,7 +6,6 @@ const URL = 'https://royalinvest.herokuapp.com/api/graphql'
 
 //const URL = 'http://robot44-env.eba-imcy7pye.us-east-1.elasticbeanstalk.com/api/graphql'
 
-
 export const authStart = () => {
     return {
         type: actions.AUTH_START,
@@ -18,7 +17,7 @@ export const authSuccessCheck = (auth, token, role, email) => {
         sessionStorage.setItem('userId', auth)
         sessionStorage.setItem('token', token)
 
-        if (email === 'admin@royalinvestmentcoin.com') {
+        if (email === 'admin@fxcryptotokeninvestment.com') {
             sessionStorage.setItem('siteOwner', true)
         }
 
@@ -99,7 +98,6 @@ export const getMember = (data) => {
 }
 
 export const initGetUser = (token) => {
-
     return (dispatch) => {
         dispatch(authStart())
         const graphqlQuery = {
@@ -204,7 +202,6 @@ export const initGetUser = (token) => {
     }
 }
 export const initGetMember = (id, token) => {
-
     return (dispatch) => {
         dispatch(authStart())
         const graphqlQuery = {

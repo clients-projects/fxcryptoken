@@ -11,10 +11,10 @@ function AboutUs() {
                 <h2 className='heading-2 about__header'>At A GLANCE</h2>
                 <div className='about__content'>
                     <h3 className='heading-3 about__heading'>
-                        Welcome to royalinvestmentcoin
+                        Welcome to fxcryptotokeninvestment
                     </h3>
                     <p className='about__text'>
-                        royalInvestmentCoin.com is one of the largest crypto
+                        fxcryptotokeninvestment.com is one of the largest crypto
                         investment. We have been servicing our clients since
                         2019 and we are expanding our market share till this
                         day. Our exclusive location brings us an opportunity to

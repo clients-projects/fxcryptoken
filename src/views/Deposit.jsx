@@ -289,8 +289,8 @@ function Deposit(props) {
                     <FormGroup className='fundAccount__form--contact'>
                         <FormControl.Static>
                             Contact management at
-                            support@royalInvestmentCoin.com for other payment
-                            methods
+                            support@fxcryptotokeninvestment.com for other
+                            payment methods
                         </FormControl.Static>
                     </FormGroup>
                 </div>
