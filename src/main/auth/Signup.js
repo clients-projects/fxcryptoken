@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import queryString from 'query-string'
 
-import Particles from 'react-particles-js'
+import Particles from 'react-tsparticles'
 
 import * as orderAction from '../../store/actions/burgerIndex'
 import Input from '../Input'

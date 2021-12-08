@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
-import Particles from 'react-particles-js'
+import Particles from 'react-tsparticles'
 import { Link } from 'react-router-dom'
 
 import * as orderAction from '../../store/actions/burgerIndex'
@@ -148,8 +148,8 @@ const Login = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-       loading: state.auth.loading,
-      // loading:false,
+        loading: state.auth.loading,
+        // loading:false,
         err: state.auth.error,
         tokenId: state.auth.tokenId,
         userId: state.auth.userId,

@@ -1,6 +1,6 @@
 import React from 'react'
 import CryptoMarketWatch from '../tradeviewWidgets/CryptoMarketWatch'
-import Particles from 'react-particles-js'
+import Particles from 'react-tsparticles'
 
 function AboutUs() {
     return (

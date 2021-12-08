@@ -10,7 +10,7 @@ import WhyChooseUs from '../main/layout/home/WhyChooseUs'
 import Testimonials from '../main/layout/home/Testimonials'
 
 import LiveChart from '../tradeviewWidgets/LiveTicker'
-import Particles from 'react-particles-js'
+import Particles from 'react-tsparticles'
 import Chart from '../tradeviewWidgets/CryptoMarketWatch'
 
 import Back from '../images/back.jpg'
@@ -73,7 +73,7 @@ function Layout(props) {
                 <Transactions />
             </div>
             <div className='section-testimonials'>
-                <Testimonials/>
+                <Testimonials />
             </div>
         </>
     )
