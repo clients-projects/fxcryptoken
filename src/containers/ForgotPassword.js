@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
-import Particles from 'react-tsparticles'
+import ReactParticles from '../components/ReactParticles'
 
 import * as orderAction from '../store/actions/burgerIndex'
 
@@ -88,16 +88,8 @@ const Login = (props) => {
 
     return (
         <>
-            <Particles
-                className='particles'
-                params={{
-                    particles: {
-                        number: {
-                            value: 20,
-                        },
-                    },
-                }}
-            />
+            <ReactParticles />
+
             <Auth login message={message}>
                 <h1 className='form__heading form__heading--forgottenPassword'>
                     Retrive Password

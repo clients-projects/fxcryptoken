@@ -10,8 +10,8 @@ import WhyChooseUs from '../main/layout/home/WhyChooseUs'
 import Testimonials from '../main/layout/home/Testimonials'
 
 import LiveChart from '../tradeviewWidgets/LiveTicker'
-import Particles from 'react-tsparticles'
 import Chart from '../tradeviewWidgets/CryptoMarketWatch'
+import ReactParticles from '../components/ReactParticles'
 
 import Back from '../images/back.jpg'
 import Hero from '../images/hero.jpg'
@@ -30,19 +30,10 @@ const whyChooseUsStyle = {
 }
 
 function Layout(props) {
+   
     return (
         <>
-            <Particles
-                className='particles'
-                params={{
-                    particles: {
-                        number: {
-                            value: 50,
-                        },
-                    },
-                }}
-            />
-
+          <ReactParticles/>
             <div className='section-liveChart'>
                 <LiveChart />
             </div>

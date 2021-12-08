@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
-import Particles from 'react-tsparticles'
 
 import * as orderAction from '../store/actions/burgerIndex'
 
 import Button from '../main/Button'
 import Input from '../main/Input'
+import ReactParticles from '../components/ReactParticles'
 
 import { required, length, email } from '../util/validators'
 import Auth from '../main/auth/Auth'
@@ -100,16 +100,8 @@ const Login = (props) => {
 
     return (
         <>
-            <Particles
-                className='particles'
-                params={{
-                    particles: {
-                        number: {
-                            value: 50,
-                        },
-                    },
-                }}
-            />
+            <ReactParticles />
+
             <Auth contactUs message={message}>
                 <h1 className='contactUs__heading'>Contact Us</h1>
                 <form onSubmit={handleLogin}>

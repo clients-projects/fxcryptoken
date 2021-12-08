@@ -1,19 +1,11 @@
 import React from 'react'
-import Particles from 'react-tsparticles'
+import ReactParticles from '../components/ReactParticles'
 
 const Faq = () => {
     return (
         <>
-            <Particles
-                className='particles'
-                params={{
-                    particles: {
-                        number: {
-                            value: 30,
-                        },
-                    },
-                }}
-            />
+            <ReactParticles />
+
             <div className='faq'>
                 <h2 className='faq__heading'>Frequently Asked Questions</h2>
 

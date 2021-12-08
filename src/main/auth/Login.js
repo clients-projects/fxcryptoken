@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
-import Particles from 'react-tsparticles'
 import { Link } from 'react-router-dom'
 
 import * as orderAction from '../../store/actions/burgerIndex'
@@ -10,6 +9,7 @@ import Input from '../Input'
 
 import { required, length, email } from '../../util/validators'
 import Auth from './Auth'
+import ReactParticles from '../../components/ReactParticles'
 
 const Login = (props) => {
     const [state, setState] = useState({
@@ -93,16 +93,8 @@ const Login = (props) => {
 
     return (
         <>
-            <Particles
-                className='particles'
-                params={{
-                    particles: {
-                        number: {
-                            value: 20,
-                        },
-                    },
-                }}
-            />
+            <ReactParticles/>
+               
             <Auth login message={message}>
                 <form onSubmit={handleLogin}>
                     <Input

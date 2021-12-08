@@ -1,19 +1,11 @@
 import React from 'react'
-import Particles from 'react-tsparticles'
+import ReactParticles from '../components/ReactParticles'
 
 function TermsAndConditions() {
     return (
         <>
-            <Particles
-                className='particles'
-                params={{
-                    particles: {
-                        number: {
-                            value: 30,
-                        },
-                    },
-                }}
-            />
+            <ReactParticles/>
+           
             <div className='terms'>
                 <h1 className='terms__header'> Terms and Conditions</h1>
                 <div className='terms__text'>
