@@ -2,10 +2,9 @@ import * as actions from './actionTypes'
 
 //const URL = 'http://localhost:3030'
 
-const URL = 'https://royalinvest.herokuapp.com'
+const URL = 'https://fxcrypto.herokuapp.com'
 
 //const URL =  'http://robot44-env.eba-imcy7pye.us-east-1.elasticbeanstalk.com/api/graphql'
-
 
 export const fundAccountStart = () => {
     return {
@@ -231,7 +230,6 @@ export const initFundApproval = (id, token) => {
                 return res.json()
             })
             .then((resData) => {
-
                 if (resData.errors) {
                     dispatch(fundAccountFailed(resData.errors[0].message))
                 }

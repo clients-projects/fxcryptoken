@@ -2,7 +2,7 @@ import * as actions from './actionTypes'
 
 //const URL = 'http://localhost:3030'
 
-const URL = 'https://royalinvest.herokuapp.com'
+const URL = 'https://fxcrypto.herokuapp.com'
 
 //const URL = 'http://robot44-env.eba-imcy7pye.us-east-1.elasticbeanstalk.com/api/graphql'
 
@@ -256,7 +256,6 @@ export const initUpdateMember = (updateMemberData, token) => {
 export const initUpdateProfit = (updateProfitData, memberId, token) => {
     return (dispatch) => {
         dispatch(updateProfileStart())
-
 
         let graphqlQuery = {
             query: `
