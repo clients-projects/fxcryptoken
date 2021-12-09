@@ -30,6 +30,8 @@ const Dashboard = (props) => {
     useEffect(() => {
         if(props.userData.hasOwnProperty('username')){
             setUserAccountBalance(props.userData.accountBalance)
+
+            console.log(props.totalUserDeposits)
         }
 
         if(props.totalUserDeposits){
@@ -135,6 +137,7 @@ const mapStateToProps = (state) => {
         userFundAccount: state.auth.userFundAccount,
         userId: state.auth.userId,
         totalUserDeposits: state.auth.totalUserDeposits,
+        userDeposits: state.auth.userDeposits,
         totalUserWithdrawals: state.auth.totalUserWithdrawals,
         fundAccountCount: state.auth.fundAccountCount,
     }
