@@ -168,12 +168,12 @@ function SubHeader(props) {
                 <div className='subHeader__contact--text'>
                     <GetCurrentDate />
                 </div>
-
+{/* 
                 <IoLogoWhatsapp className='subHeader__contact--logo' />
                 <p className='subHeader__contact--text'>+18589463698</p>
 
                 <AiFillPhone className='subHeader__contact--logo' />
-                <p className='subHeader__contact--text'>+12024783100</p>
+                <p className='subHeader__contact--text'>+12024783100</p> */}
 
                 <MdEmail className='subHeader__contact--logo' />
                 <p className='subHeader__contact--text'>
