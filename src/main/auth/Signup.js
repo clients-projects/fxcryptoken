@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import queryString from 'query-string'
 
-import Particles from 'react-tsparticles'
-
 import * as orderAction from '../../store/actions/burgerIndex'
 import Input from '../Input'
 import Button from '../Button'
 import { required, length, email } from '../../util/validators'
 import Auth from './Auth'
+import ReactParticles from '../../components/ReactParticles'
 
 const Signup = (props) => {
     const parsed = queryString.parse(window.location.search)
@@ -156,26 +155,7 @@ const Signup = (props) => {
 
     return (
         <>
-            <Particles
-                className='particles'
-                // style={{
-                //     background: 'red',
-                //     zIndex: -1,
-                //     width: '100%',
-                //     position: 'absolute',
-                //     // left: 0,
-                //     // top: 0,
-                //     // right: 0,
-                //     // bottom: 0,
-                // }}
-                params={{
-                    particles: {
-                        number: {
-                            value: 70,
-                        },
-                    },
-                }}
-            />
+        <ReactParticles/>
             <Auth message={message}>
                 <form onSubmit={handleSignup} className='form__box'>
                     <div className='form-1'>
