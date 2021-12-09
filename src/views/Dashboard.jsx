@@ -37,7 +37,10 @@ const Dashboard = (props) => {
                 keepProfits += p.profits
             })
 
+            console.log({keepProfits})
             const accountBalandProfits = props.userData.accountBalance + keepProfits
+
+            console.log({accountBalandProfits})
 
             setUserAccountBalance(accountBalandProfits)
         }
