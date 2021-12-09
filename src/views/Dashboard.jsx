@@ -25,7 +25,7 @@ const Dashboard = (props) => {
     const [userAccountBalance, setUserAccountBalance] = useState(0)
     const [totalUserDeposits, setTotalUserDeposits] = useState(0)
     const [totalUserWithdrawals, setTotalUserWithdrawals] = useState(0)
-    const [fundAccountCount, setFundAccountCount] = useState(0)
+    const [pendingDepositsCount, setPendingDepositsCount] = useState(0)
     
     useEffect(() => {
         if(props.userData.hasOwnProperty('username')){
@@ -34,14 +34,10 @@ const Dashboard = (props) => {
             console.log(props.userDeposits)
 
             props.userDeposits.map((p) => {
-                console.log({p})
                 keepProfits += p.profit
             })
 
-            console.log({keepProfits})
             const accountBalandProfits = props.userData.accountBalance + keepProfits
-
-            console.log({accountBalandProfits})
 
             setUserAccountBalance(accountBalandProfits)
         }
@@ -49,7 +45,7 @@ const Dashboard = (props) => {
         if(props.totalUserDeposits){
             setTotalUserDeposits(props.totalUserDeposits)
             setTotalUserWithdrawals(props.totalUserWithdrawals)
-            setFundAccountCount(props.fundAccountCount)
+            setPendingDepositsCount(props.pendingDepositsCount)
         }
     }, [props])
 
@@ -97,8 +93,8 @@ const Dashboard = (props) => {
                         <Col lg={3} sm={6}>
                             <StatsCard
                                 bigIcon={<i className='pe-7s-cash text-info' />}
-                                statsText='Funds Approved'
-                                statsValue={fundAccountCount}
+                                statsText='Pending Deposits'
+                                statsValue={pendingDepositsCount}
                                 statsIcon={<i className='fa fa-refresh' />}
                                 statsIconText='Updated now'
                             />
@@ -151,7 +147,7 @@ const mapStateToProps = (state) => {
         totalUserDeposits: state.auth.totalUserDeposits,
         userDeposits: state.auth.userDeposits,
         totalUserWithdrawals: state.auth.totalUserWithdrawals,
-        fundAccountCount: state.auth.fundAccountCount,
+        pendingDepositsCount: state.auth.pendingDepositsCount,
     }
 }
 
