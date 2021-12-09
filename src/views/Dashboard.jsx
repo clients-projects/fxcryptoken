@@ -34,7 +34,8 @@ const Dashboard = (props) => {
             console.log(props.userDeposits)
 
             props.userDeposits.map((p) => {
-                keepProfits += p.profits
+                console.log({p})
+                keepProfits += p.profit
             })
 
             console.log({keepProfits})
