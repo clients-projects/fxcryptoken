@@ -29,9 +29,17 @@ const Dashboard = (props) => {
     
     useEffect(() => {
         if(props.userData.hasOwnProperty('username')){
-            setUserAccountBalance(props.userData.accountBalance)
 
-            console.log(props.totalUserDeposits)
+            let keepProfits = 0
+            console.log(props.userDeposits)
+
+            props.userDeposits.map((p) => {
+                keepProfits += p.profits
+            })
+
+            const accountBalandProfits = props.userData.accountBalance + keepProfits
+
+            setUserAccountBalance(accountBalandProfits)
         }
 
         if(props.totalUserDeposits){
