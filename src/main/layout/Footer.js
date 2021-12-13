@@ -47,11 +47,11 @@ function Footer() {
                         contact Us
                     </h4>
                     <ul className='footer__list'>
-                        <li className='footer__list--item'>
-                            <ImLocation2
-                                className='footer__list--icon'
-                                style={{ textTransform: 'uppercase' }}
-                            />
+                        <li
+                            className='footer__list--item'
+                            style={{ textTransform: 'uppercase' }}
+                        >
+                            <ImLocation2 className='footer__list--icon' />
                             Downtown Atlanta, 235 Peachtree Street NE, Atlanta,
                             GA 30303, USA{' '}
                         </li>
