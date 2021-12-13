@@ -28,6 +28,10 @@
     padding: 2rem 5rem;
     color: $color-primary;
     align-items: start;
+
+    @include respond(phone){
+        padding: 2rem 7rem;
+    }
 }
 
 .plan {
