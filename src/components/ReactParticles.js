@@ -29,7 +29,7 @@ const ReactParticles = () => {
                             enable: true,
                             outMode: 'bounce',
                             random: false,
-                            speed: 6,
+                            speed: 4,
                             straight: false,
                         },
                         number: {
@@ -37,7 +37,7 @@ const ReactParticles = () => {
                                 enable: true,
                                 value_area: 800,
                             },
-                            value: 50,
+                            value: 30,
                         },
                         opacity: {
                             value: 0.2,

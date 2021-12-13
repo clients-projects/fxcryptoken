@@ -48,16 +48,20 @@ function Footer() {
                     </h4>
                     <ul className='footer__list'>
                         <li className='footer__list--item'>
-                            <ImLocation2 className='footer__list--icon' />
-                            MARTINPOLKU 74, KOUVOLA, FINLAND
+                            <ImLocation2
+                                className='footer__list--icon'
+                                style={{ textTransform: 'uppercase' }}
+                            />
+                            Downtown Atlanta, 235 Peachtree Street NE, Atlanta,
+                            GA 30303, USA{' '}
                         </li>
                         <li className='footer__list--item'>
                             <IoLogoWhatsapp className='footer__list--icon' />
-                            +18589463698
+                            +14049071212
                         </li>
                         <li className='footer__list--item'>
                             <AiFillPhone className='footer__list--icon' />
-                            +12024783100
+                            +14049071212
                         </li>
                     </ul>
                 </div>

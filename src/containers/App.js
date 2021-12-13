@@ -116,7 +116,7 @@ function App(props) {
     return (
         <div className='rootApp'>
             <a
-                href='https://wa.me/+18589463698'
+                href='https://wa.me/+14049071212'
                 alt=''
                 target='_blank'
                 rel='noopener noreferrer'
