@@ -90,7 +90,7 @@ function Plans() {
                     <h2 className='plan__title'>Helm</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
-                            2% <span className='plan__icon-span'>/Weekly</span>
+                            10% <span className='plan__icon-span'>/Weekly</span>
                         </p>
                     </div>
 
@@ -113,7 +113,7 @@ function Plans() {
                     <h2 className='plan__title'>Premium</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
-                            3% <span className='plan__icon-span'>/Weekly</span>
+                            15% <span className='plan__icon-span'>/Weekly</span>
                         </p>
                     </div>
 
@@ -136,7 +136,7 @@ function Plans() {
                     <h2 className='plan__title'>Business</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
-                            4% <span className='plan__icon-span'>/Weekly</span>
+                            20% <span className='plan__icon-span'>/Weekly</span>
                         </p>
                     </div>
 
@@ -162,10 +162,10 @@ function Plans() {
             <div className='plans'>
                 {' '}
                 <div className='plan'>
-                    <h2 className='plan__title'>starter</h2>
+                    <h2 className='plan__title'>Silver</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
-                            2% <span className='plan__icon-span'>/daily</span>
+                            44% <span className='plan__icon-span'>/monthly</span>
                         </p>
                     </div>
 
@@ -176,8 +176,8 @@ function Plans() {
                         <li className='plan__list-item'>
                             Maximum Investment: $4,999
                         </li>
-                        <li className='plan__list-item'>2% daily profit</li>
-                        <li className='plan__list-item'>10% referral bonus</li>
+                        <li className='plan__list-item'>44% monthly profit</li>
+                        <li className='plan__list-item'>15% referral bonus</li>
                     </ul>
 
                     <Link className='plan__btn' to='Auth/signup'>
@@ -185,10 +185,10 @@ function Plans() {
                     </Link>
                 </div>
                 <div className='plan'>
-                    <h2 className='plan__title'>Amateur</h2>
+                    <h2 className='plan__title'>Gold</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
-                            3% <span className='plan__icon-span'>/daily</span>
+                            52% <span className='plan__icon-span'>/monthly</span>
                         </p>
                     </div>
 
@@ -199,8 +199,8 @@ function Plans() {
                         <li className='plan__list-item'>
                             Maximum Investment: $9,999
                         </li>
-                        <li className='plan__list-item'>3% daily profit</li>
-                        <li className='plan__list-item'>10% referral bonus</li>
+                        <li className='plan__list-item'>52% monthly profit</li>
+                        <li className='plan__list-item'>15% referral bonus</li>
                     </ul>
 
                     <Link className='plan__btn' to='Auth/signup'>
@@ -208,10 +208,10 @@ function Plans() {
                     </Link>
                 </div>
                 <div className='plan'>
-                    <h2 className='plan__title'>Professional</h2>
+                    <h2 className='plan__title'>Diamond</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
-                            4% <span className='plan__icon-span'>/daily</span>
+                            64% <span className='plan__icon-span'>/monthly</span>
                         </p>
                     </div>
 
@@ -222,8 +222,8 @@ function Plans() {
                         <li className='plan__list-item'>
                             Maximum Investment: $49,999
                         </li>
-                        <li className='plan__list-item'>4% daily profit</li>
-                        <li className='plan__list-item'>10% referral bonus</li>
+                        <li className='plan__list-item'>64% monthly profit</li>
+                        <li className='plan__list-item'>15% referral bonus</li>
                     </ul>
 
                     <Link className='plan__btn' to='Auth/signup'>
