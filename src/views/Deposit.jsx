@@ -19,11 +19,16 @@ function Deposit(props) {
     const [adminEthereumAddress, setAdminEthereumAddress] = useState('')
 
     const options = [
+        { label: 'STARTER ($300 - $4,999) - Daily', value: 'STARTER' },
+        { label: 'AMATEUR ($5000 - $9,999)', value: 'AMATEUR' },
+        { label: 'PROFESSIONAL ($10,000 - $49,999)', value: 'PROFESSIONAL' },
         { label: 'STARTER ($300 - $4,999)', value: 'STARTER' },
         { label: 'AMATEUR ($5000 - $9,999)', value: 'AMATEUR' },
         { label: 'PROFESSIONAL ($10,000 - $49,999)', value: 'PROFESSIONAL' },
-        { label: 'MASTER ($50,000 - $99,999)', value: 'MASTER' },
-        { label: 'DIAMOND ($100,000 - $500,000)', value: 'DIAMOND' },
+        { label: 'STARTER ($300 - $4,999)', value: 'STARTER' },
+        { label: 'AMATEUR ($5000 - $9,999)', value: 'AMATEUR' },
+        { label: 'PROFESSIONAL ($10,000 - $49,999)', value: 'PROFESSIONAL' },
+     
     ]
 
     const customStyles = {
