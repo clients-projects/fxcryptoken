@@ -14,9 +14,10 @@
     padding: 1rem;
     text-align: center;
     margin: 2rem 0;
-}
-.plans__category:nth-child(1) {
-    background: red;
+
+    &:not(:nth-of-type(2)) {
+        margin-top: 6rem;
+    }
 }
 
 .plans {
