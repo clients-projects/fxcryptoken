@@ -83,7 +83,9 @@ function Plans() {
                         INVEST
                     </Link>
                 </div>
-               
+            </div>
+            <div className='plans__category'>
+                <h1>Weekly investment packages</h1>
             </div>
             <div className='plans'>
                 {' '}
@@ -156,7 +158,9 @@ function Plans() {
                         INVEST
                     </Link>
                 </div>
-               
+            </div>
+            <div className='plans__category'>
+                <h1>Monthly investment packages</h1>
             </div>
             <div className='plans'>
                 {' '}
@@ -229,7 +233,6 @@ function Plans() {
                         INVEST
                     </Link>
                 </div>
-               
             </div>
         </>
     )
