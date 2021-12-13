@@ -32,9 +32,7 @@ const Dashboard = (props) => {
             props.onInitGetFunds(props.tokenId)
         }
 
-        console.log('before total disbursed', props.totalDisbursedAmount)
-        if (props.totalDisbursedAmount) {
-            console.log('after total disbursed', props.totalDisbursedAmount)
+        if (props.totalReceivedAmount) {
             setTotalDisbursedAmount(props.totalDisbursedAmount)
             setTotalReceivedAmount(props.totalReceivedAmount)
             setPendingDepositsCount(props.pendingDepositsCount)
