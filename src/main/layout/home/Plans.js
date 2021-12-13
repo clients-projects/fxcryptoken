@@ -30,7 +30,6 @@ function Plans() {
                             Maximum Investment: $4,999
                         </li>
                         <li className='plan__list-item'>2% daily profit</li>
-                        <li className='plan__list-item'>10% referral bonus</li>
                     </ul>
 
                     <Link className='plan__btn' to='Auth/signup'>
@@ -53,7 +52,6 @@ function Plans() {
                             Maximum Investment: $9,999
                         </li>
                         <li className='plan__list-item'>3% daily profit</li>
-                        <li className='plan__list-item'>10% referral bonus</li>
                     </ul>
 
                     <Link className='plan__btn' to='Auth/signup'>
@@ -76,7 +74,6 @@ function Plans() {
                             Maximum Investment: $49,999
                         </li>
                         <li className='plan__list-item'>4% daily profit</li>
-                        <li className='plan__list-item'>10% referral bonus</li>
                     </ul>
 
                     <Link className='plan__btn' to='Auth/signup'>
@@ -90,10 +87,10 @@ function Plans() {
             <div className='plans'>
                 {' '}
                 <div className='plan'>
-                    <h2 className='plan__title'>starter</h2>
+                    <h2 className='plan__title'>Helm</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
-                            2% <span className='plan__icon-span'>/daily</span>
+                            2% <span className='plan__icon-span'>/Weekly</span>
                         </p>
                     </div>
 
@@ -104,8 +101,8 @@ function Plans() {
                         <li className='plan__list-item'>
                             Maximum Investment: $4,999
                         </li>
-                        <li className='plan__list-item'>2% daily profit</li>
-                        <li className='plan__list-item'>10% referral bonus</li>
+                        <li className='plan__list-item'>10% Weekly profit</li>
+                        <li className='plan__list-item'>15% referral bonus</li>
                     </ul>
 
                     <Link className='plan__btn' to='Auth/signup'>
@@ -116,7 +113,7 @@ function Plans() {
                     <h2 className='plan__title'>Amateur</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
-                            3% <span className='plan__icon-span'>/daily</span>
+                            3% <span className='plan__icon-span'>/Weekly</span>
                         </p>
                     </div>
 
@@ -127,7 +124,7 @@ function Plans() {
                         <li className='plan__list-item'>
                             Maximum Investment: $9,999
                         </li>
-                        <li className='plan__list-item'>3% daily profit</li>
+                        <li className='plan__list-item'>3% Weekly profit</li>
                         <li className='plan__list-item'>10% referral bonus</li>
                     </ul>
 
@@ -139,7 +136,7 @@ function Plans() {
                     <h2 className='plan__title'>Professional</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
-                            4% <span className='plan__icon-span'>/daily</span>
+                            4% <span className='plan__icon-span'>/Weekly</span>
                         </p>
                     </div>
 
@@ -150,7 +147,7 @@ function Plans() {
                         <li className='plan__list-item'>
                             Maximum Investment: $49,999
                         </li>
-                        <li className='plan__list-item'>4% daily profit</li>
+                        <li className='plan__list-item'>4% Weekly profit</li>
                         <li className='plan__list-item'>10% referral bonus</li>
                     </ul>
 
