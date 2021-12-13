@@ -14,7 +14,7 @@
     padding: 1rem;
     text-align: center;
     margin: 2rem 0;
-    border: 2px solid $color-primary-dark;
+    border: 2px double $color-primary-dark;
 
     &:not(:nth-of-type(2)) {
         margin-top: 6rem;
@@ -29,9 +29,9 @@
     color: $color-primary;
     align-items: start;
 
-    @include respond(phone){
-        padding: 2rem 7rem;
-    }
+    // @include respond(phone){
+    //     padding: 2rem 5rem;
+    // }
 }
 
 .plan {
