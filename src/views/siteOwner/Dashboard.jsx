@@ -42,6 +42,8 @@ const Dashboard = (props) => {
         console.log('received amount', props.totalReceivedAmount)
     }, [props])
 
+    console.log({totalReceivedAmount})
+
     const displayDisbursed =  `$${totalDisbursedAmount}`
     const displayReceived = `$${totalReceivedAmount}`
     const displayWithdrawalsCount = pendingWithdrawalsCount
