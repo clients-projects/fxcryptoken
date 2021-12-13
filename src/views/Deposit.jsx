@@ -20,14 +20,16 @@ function Deposit(props) {
 
     const options = [
         { label: 'STARTER ($300 - $4,999) - Daily', value: 'STARTER' },
-        { label: 'AMATEUR ($5000 - $9,999)', value: 'AMATEUR' },
-        { label: 'PROFESSIONAL ($10,000 - $49,999)', value: 'PROFESSIONAL' },
-        { label: 'STARTER ($300 - $4,999)', value: 'STARTER' },
-        { label: 'AMATEUR ($5000 - $9,999)', value: 'AMATEUR' },
-        { label: 'PROFESSIONAL ($10,000 - $49,999)', value: 'PROFESSIONAL' },
-        { label: 'STARTER ($300 - $4,999)', value: 'STARTER' },
-        { label: 'AMATEUR ($5000 - $9,999)', value: 'AMATEUR' },
-        { label: 'PROFESSIONAL ($10,000 - $49,999)', value: 'PROFESSIONAL' },
+        { label: 'AMATEUR ($5000 - $9,999) Daily', value: 'AMATEUR' },
+        { label: 'PROFESSION ($10,000 - $49,999) - Daily', value: 'PROFESSIONAL' },
+
+        { label: 'HELM ($300 - $4,999) - Weekly', value: 'HELM' },
+        { label: 'PREMIUM ($5000 - $9,999) - Weekly', value: 'PREMIUM' },
+        { label: 'BUSINESS ($10,000 - $49,999) - Weekly', value: 'BUSINESS' },
+        
+        { label: 'SILVER ($300 - $4,999) - Monthly', value: 'SILVER' },
+        { label: 'GOLD ($5000 - $9,999) - Monthly', value: 'GOLD' },
+        { label: 'DIAMOND ($10,000 - $49,999) - Monthly', value: 'DIAMOND' },
      
     ]
 
@@ -48,17 +50,17 @@ function Deposit(props) {
             selectedPackage = newValue.value
         }
 
-        if (selectedPackage === 'STARTER') {
-            setPackageName('STARTER')
+        if (selectedPackage === 'SILVER') {
+            setPackageName('SILVER')
             setPackageProfit(amountToDeposit * 0.02)
         }
-        if (selectedPackage === 'AMATEUR') {
-            setPackageName('AMATEUR')
+        if (selectedPackage === 'GOLD') {
+            setPackageName('GOLD')
 
             setPackageProfit(amountToDeposit * 0.03)
         }
-        if (selectedPackage === 'PROFESSIONAL') {
-            setPackageName('PROFESSIONAL')
+        if (selectedPackage === 'DIAMOND') {
+            setPackageName('DIAMOND')
 
             setPackageProfit(amountToDeposit * 0.04)
         }
@@ -86,17 +88,17 @@ function Deposit(props) {
             setError(false)
             setMessage('')
 
-            if (packageName === 'STARTER') {
-                setPackageName('STARTER')
+            if (packageName === 'SILVER') {
+                setPackageName('SILVER')
                 setPackageProfit(amountValue * 0.02)
             }
-            if (packageName === 'AMATEUR') {
-                setPackageName('AMATEUR')
+            if (packageName === 'GOLD') {
+                setPackageName('GOLD')
 
                 setPackageProfit(amountValue * 0.03)
             }
-            if (packageName === 'PROFESSIONAL') {
-                setPackageName('PROFESSIONAL')
+            if (packageName === 'DIAMOND') {
+                setPackageName('DIAMOND')
 
                 setPackageProfit(amountValue * 0.04)
             }
@@ -117,27 +119,27 @@ function Deposit(props) {
 
     useEffect(() => {
         switch (packageName) {
-            case 'STARTER':
+            case 'SILVER':
                 setPlanDetails({
-                    name: 'STARTER',
+                    name: 'SILVER',
                     percent: 2,
                     hours: 24,
                     minimum: 300,
                     maximum: 4999,
                 })
                 break
-            case 'AMATEUR':
+            case 'GOLD':
                 setPlanDetails({
-                    name: 'AMATEUR',
+                    name: 'GOLD',
                     percent: 3,
                     hours: 24,
                     minimum: 5000,
                     maximum: 9999,
                 })
                 break
-            case 'PROFESSIONAL':
+            case 'DIAMOND':
                 setPlanDetails({
-                    name: 'PROFESSIONAL',
+                    name: 'DIAMOND',
                     percent: 4,
                     hours: 24,
                     minimum: 10000,
