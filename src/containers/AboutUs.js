@@ -16,7 +16,7 @@ function AboutUs() {
                     <p className='about__text'>
                         fxcryptotokeninvestment.com is one of the largest crypto
                         investment. We have been servicing our clients since
-                        2019 and we are expanding our market share till this
+                        2010 and we are expanding our market share till this
                         day. Our exclusive location brings us an opportunity to
                         work with clients anywhere from the coast of the
                         Norwegian Sea to the shores of Western Europe.
