@@ -33,6 +33,7 @@ const Dashboard = (props) => {
         }
 
         if (props.totalDisbursedAmount) {
+            console.log('total disbursed', props.totalDisbursedAmount)
             setTotalDisbursedAmount(props.totalDisbursedAmount)
             setTotalReceivedAmount(props.totalReceivedAmount)
             setPendingDepositsCount(props.pendingDepositsCount)
