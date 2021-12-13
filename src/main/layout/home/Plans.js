@@ -102,7 +102,7 @@ function Plans() {
                             Maximum Investment: $4,999
                         </li>
                         <li className='plan__list-item'>10% Weekly profit</li>
-                        <li className='plan__list-item'>15% referral bonus</li>
+                        <li className='plan__list-item'>10% referral bonus</li>
                     </ul>
 
                     <Link className='plan__btn' to='Auth/signup'>
@@ -110,7 +110,7 @@ function Plans() {
                     </Link>
                 </div>
                 <div className='plan'>
-                    <h2 className='plan__title'>Amateur</h2>
+                    <h2 className='plan__title'>Premium</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
                             3% <span className='plan__icon-span'>/Weekly</span>
@@ -124,7 +124,7 @@ function Plans() {
                         <li className='plan__list-item'>
                             Maximum Investment: $9,999
                         </li>
-                        <li className='plan__list-item'>3% Weekly profit</li>
+                        <li className='plan__list-item'>15% Weekly profit</li>
                         <li className='plan__list-item'>10% referral bonus</li>
                     </ul>
 
@@ -133,7 +133,7 @@ function Plans() {
                     </Link>
                 </div>
                 <div className='plan'>
-                    <h2 className='plan__title'>Professional</h2>
+                    <h2 className='plan__title'>Business</h2>
                     <div className='plan__icon'>
                         <p className='plan__icon-percent'>
                             4% <span className='plan__icon-span'>/Weekly</span>
@@ -147,7 +147,7 @@ function Plans() {
                         <li className='plan__list-item'>
                             Maximum Investment: $49,999
                         </li>
-                        <li className='plan__list-item'>4% Weekly profit</li>
+                        <li className='plan__list-item'>20% Weekly profit</li>
                         <li className='plan__list-item'>10% referral bonus</li>
                     </ul>
 
