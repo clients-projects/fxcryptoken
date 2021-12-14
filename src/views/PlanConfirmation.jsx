@@ -12,10 +12,8 @@ function PlanConfirmation(props) {
 
     let walletAddress
     if (currency === 'Bitcoin') {
-       // walletAddress = '15Tn9NSE3Qpk7x6s3YKe55UupLKsMXz4hm'
        walletAddress = props.location.state.adminBitcoinAddress
     } else if (currency === 'Ethereum') {
-       // walletAddress = '0x417C5138c862767A77990D39D5E094c0CF9b2B40'
        walletAddress = props.location.state.adminEthereumAddress
     }
 
@@ -31,7 +29,7 @@ function PlanConfirmation(props) {
                     {name}
                 </p>
                 <p className='deposit__info--left'>Profit</p>
-                <p className='deposit__info--right'>{`${percent}% for ${hours} ${duration}`}</p>
+                <p className='deposit__info--right'>{`${percent}% for ${duration}`}</p>
                 <p className='deposit__info--left'>Principal Return</p>
                 <p className='deposit__info--right'>Yes</p>
                 <p className='deposit__info--left'>Principal Withdraw</p>
