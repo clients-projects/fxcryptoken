@@ -353,6 +353,7 @@ function Deposit(props) {
 
     const displayUserFunds = `$${userAccountBalance}`
 
+    console.log('package details', planDetails)
     return (
         <>
             <div className='fundAccount'>
