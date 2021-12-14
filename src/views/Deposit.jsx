@@ -139,11 +139,10 @@ function Deposit(props) {
             selectedPackage = newValue.value
         }
 
-
         options.map((v) => {
             if (v.value === selectedPackage) {
                 console.log({ v })
-                const profit = (v.details.percent / 100)
+                const profit = v.details.percent / 100
 
                 setPackageName(v.value)
                 setPackageProfit(profit)
@@ -152,9 +151,8 @@ function Deposit(props) {
             }
         })
 
-        console.log({packageName})
-        console.log({packageProfit})
-
+        console.log({ packageName })
+        console.log({ packageProfit })
     }
 
     const onAmountChange = (e) => {
@@ -179,11 +177,9 @@ function Deposit(props) {
                 }
             })
 
-
             setAmountToDeposit(amountValue)
         }
     }
-
 
     useEffect(() => {
         if (props.adminData) {
@@ -191,19 +187,18 @@ function Deposit(props) {
             setAdminEthereumAddress(props.adminData.ethereumAccount)
         }
         if (props.userData.hasOwnProperty('username')) {
-            
             let keepProfits = 0
 
-            console.log('total user deposits', props.totalUserDeposits)
+            console.log('total user deposits', props.userDeposits)
 
-            // props.totalUserDeposits.map((p) => {
-            //     keepProfits += p.profit
-            // })
+            props.userDeposits.map((p) => {
+                keepProfits += p.profit
+            })
 
-            // const accountBalandProfits =
-            //     props.userData.accountBalance + keepProfits
+            const accountBalandProfits =
+                props.userData.accountBalance + keepProfits
 
-            // setUserAccountBalance(accountBalandProfits)
+            setUserAccountBalance(accountBalandProfits)
         }
     }, [props])
 
@@ -227,7 +222,7 @@ function Deposit(props) {
             setMessage('')
 
             if (!error) {
-              //  props.onInitInvestNow(formData, props.tokenId)
+                //  props.onInitInvestNow(formData, props.tokenId)
 
                 props.history.push('/admin/plan-confirmation/:' + packageName, {
                     ...formData,
@@ -340,6 +335,7 @@ const mapStateToProps = (state) => {
         loading: state.user.loading,
         tokenId: state.auth.tokenId,
         userData: state.auth.userData,
+        userDeposits: state.auth.userDeposits,
         userFundAccount: state.auth.userFundAccount,
         userId: state.auth.userId,
         totalUserDeposits: state.auth.totalUserDeposits,
