@@ -19,14 +19,20 @@ function Deposit(props) {
     const [adminEthereumAddress, setAdminEthereumAddress] = useState('')
 
     const options = [
-        { label: 'STARTER ($300 - $4,999) - Daily', value: 'STARTER' },
+        {
+            label: 'STARTER ($300 - $4,999) - Daily',
+            value: 'STARTER',
+            details: {
+                percent: 2,
+            },
+        },
         { label: 'AMATEUR ($5000 - $9,999) Daily', value: 'AMATEUR' },
         {
             label: 'PROFESSION ($10,000 - $49,999) - Daily',
             value: 'PROFESSIONAL',
         },
 
-        { label: 'HELM ($300 - $4,999) - Weekly', value: 'HELM' }, 
+        { label: 'HELM ($300 - $4,999) - Weekly', value: 'HELM' },
         { label: 'PREMIUM ($5000 - $9,999) - Weekly', value: 'PREMIUM' },
         { label: 'BUSINESS ($10,000 - $49,999) - Weekly', value: 'BUSINESS' },
 
@@ -52,14 +58,14 @@ function Deposit(props) {
             selectedPackage = newValue.value
         }
 
-        console.log({selectedPackage})
+        console.log({ selectedPackage })
 
-        console.log({options})  
+        console.log({ options })
 
         options.map((v) => {
             console.log(v.value)
-            if(v.value === selectedPackage){
-                console.log({v})
+            if (v.value === selectedPackage) {
+                console.log({ v })
             }
         })
 
