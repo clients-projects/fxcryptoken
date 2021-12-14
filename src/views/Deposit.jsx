@@ -191,7 +191,18 @@ function Deposit(props) {
             setAdminEthereumAddress(props.adminData.ethereumAccount)
         }
         if (props.userData.hasOwnProperty('username')) {
-            setUserAccountBalance(props.userData.accountBalance)
+            
+            let keepProfits = 0
+            console.log(props.userDeposits)
+
+            props.userDeposits.map((p) => {
+                keepProfits += p.profit
+            })
+
+            const accountBalandProfits =
+                props.userData.accountBalance + keepProfits
+
+            setUserAccountBalance(accountBalandProfits)
         }
     }, [props])
 
