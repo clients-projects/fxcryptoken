@@ -219,9 +219,9 @@ function Deposit(props) {
 
     useEffect(() => {
         switch (packageName) {
-            case 'SILVER':
+            case 'STARTER':
                 setPlanDetails({
-                    name: 'SILVER',
+                    name: 'STARTER',
                     percent: 2,
                     hours: 24,
                     minimum: 300,
