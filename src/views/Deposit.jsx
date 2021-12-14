@@ -134,13 +134,10 @@ function Deposit(props) {
     }
 
     const onPackageChange = (newValue) => {
-        console.log('package change', newValue.value)
         let selectedPackage = ''
         if (newValue) {
             selectedPackage = newValue.value
         }
-
-        console.log({selectedPackage})
 
 
         options.map((v) => {
@@ -319,7 +316,6 @@ function Deposit(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log({packageName})
         const formData = {
             packageName,
             amountToDeposit: Math.floor(amountToDeposit),
@@ -353,7 +349,6 @@ function Deposit(props) {
 
     const displayUserFunds = `$${userAccountBalance}`
 
-    console.log('package details', planDetails)
     return (
         <>
             <div className='fundAccount'>
