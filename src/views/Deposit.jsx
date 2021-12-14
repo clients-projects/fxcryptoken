@@ -23,22 +23,48 @@ function Deposit(props) {
             label: 'STARTER ($300 - $4,999) - Daily',
             value: 'STARTER',
             details: {
+                name: 'SILVER',
                 percent: 2,
+                hours: 24,
+                minimum: 300,
+                maximum: 4999,
             },
         },
-        { label: 'AMATEUR ($5000 - $9,999) Daily', value: 'AMATEUR' },
+        {
+            label: 'AMATEUR ($5000 - $9,999) Daily',
+            value: 'AMATEUR',
+            details: {
+                name: 'GOLD',
+                percent: 3,
+                hours: 24,
+                minimum: 5000,
+                maximum: 9999,
+            },
+        },
         {
             label: 'PROFESSION ($10,000 - $49,999) - Daily',
             value: 'PROFESSIONAL',
         },
 
-        { label: 'HELM ($300 - $4,999) - Weekly', value: 'HELM' },
-        { label: 'PREMIUM ($5000 - $9,999) - Weekly', value: 'PREMIUM' },
-        { label: 'BUSINESS ($10,000 - $49,999) - Weekly', value: 'BUSINESS' },
+        { label: 'HELM ($300 - $4,999) - Weekly', value: 'HELM', details: {
+            
+        } },
+        { label: 'PREMIUM ($5000 - $9,999) - Weekly', value: 'PREMIUM', details: {
+            
+        } },
+        { label: 'BUSINESS ($10,000 - $49,999) - Weekly', value: 'BUSINESS', details: {
+            
+        } },
 
-        { label: 'SILVER ($300 - $4,999) - Monthly', value: 'SILVER' },
-        { label: 'GOLD ($5000 - $9,999) - Monthly', value: 'GOLD' },
-        { label: 'DIAMOND ($10,000 - $49,999) - Monthly', value: 'DIAMOND' },
+        { label: 'SILVER ($300 - $4,999) - Monthly', value: 'SILVER' , details: {
+            
+        }},
+        { label: 'GOLD ($5000 - $9,999) - Monthly', value: 'GOLD', details: {
+            
+        } },
+        { label: 'DIAMOND ($10,000 - $49,999) - Monthly', value: 'DIAMOND', details: {
+            
+        } },
     ]
 
     const customStyles = {
