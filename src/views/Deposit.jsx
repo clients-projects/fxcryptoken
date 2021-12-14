@@ -144,7 +144,6 @@ function Deposit(props) {
             if (v.value === selectedPackage) {
                 console.log({ v })
                 const profit = (v.details.percent / 100)
-                console.log({profit})
 
                 setPackageName(v.value)
                 setPackageProfit(profit)
@@ -168,30 +167,16 @@ function Deposit(props) {
             setError(false)
             setMessage('')
 
-            if (packageName === 'SILVER') {
-                setPackageName('SILVER')
-                setPackageProfit(amountValue * 0.02)
-            }
-            if (packageName === 'GOLD') {
-                setPackageName('GOLD')
+            options.map((v) => {
+                if (v.value === packageName) {
+                    console.log({ v })
+                    const profit = v.details.percent / 100
 
-                setPackageProfit(amountValue * 0.03)
-            }
-            if (packageName === 'DIAMOND') {
-                setPackageName('DIAMOND')
+                    setPackageName(v.value)
+                    setPackageProfit(amountValue * profit)
+                }
+            })
 
-                setPackageProfit(amountValue * 0.04)
-            }
-            if (packageName === 'MASTER') {
-                setPackageName('MASTER')
-
-                setPackageProfit(amountValue * 0.06)
-            }
-            if (packageName === 'DIAMOND') {
-                setPackageName('DIAMOND')
-
-                setPackageProfit(amountValue * 0.1)
-            }
 
             setAmountToDeposit(amountValue)
         }
@@ -208,78 +193,7 @@ function Deposit(props) {
                     maximum: 4999,
                 })
                 break
-            case 'GOLD':
-                setPlanDetails({
-                    name: 'GOLD',
-                    percent: 3,
-                    hours: 24,
-                    minimum: 5000,
-                    maximum: 9999,
-                })
-                break
-            case 'DIAMOND':
-                setPlanDetails({
-                    name: 'DIAMOND',
-                    percent: 4,
-                    hours: 24,
-                    minimum: 10000,
-                    maximum: 49999,
-                })
-                break
-            case 'MASTER':
-                setPlanDetails({
-                    name: 'MASTER',
-                    percent: 6,
-                    hours: 24,
-                    minimum: 50000,
-                    maximum: 99999,
-                })
-                break
-            case 'DIAMOND':
-                setPlanDetails({
-                    name: 'DIAMOND',
-                    percent: 10,
-                    hours: 24,
-                    minimum: 100000,
-                    maximum: 500000,
-                })
-                break
-            case 'DIAMOND':
-                setPlanDetails({
-                    name: 'DIAMOND',
-                    percent: 10,
-                    hours: 24,
-                    minimum: 100000,
-                    maximum: 500000,
-                })
-                break
-            case 'DIAMOND':
-                setPlanDetails({
-                    name: 'DIAMOND',
-                    percent: 10,
-                    hours: 24,
-                    minimum: 100000,
-                    maximum: 500000,
-                })
-                break
-            case 'DIAMOND':
-                setPlanDetails({
-                    name: 'DIAMOND',
-                    percent: 10,
-                    hours: 24,
-                    minimum: 100000,
-                    maximum: 500000,
-                })
-                break
-            case 'DIAMOND':
-                setPlanDetails({
-                    name: 'DIAMOND',
-                    percent: 10,
-                    hours: 24,
-                    minimum: 100000,
-                    maximum: 500000,
-                })
-                break
+            
 
             default:
                 setPlanDetails({})
