@@ -148,6 +148,10 @@ function Deposit(props) {
                 setPackageProfit(amountToDeposit * (v.details.percent / 100))
             }
         })
+
+        console.log({packageName})
+        console.log(packageProfit)
+
     }
 
     const onAmountChange = (e) => {
