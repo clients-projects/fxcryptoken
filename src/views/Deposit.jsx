@@ -148,6 +148,7 @@ function Deposit(props) {
                 setPackageName(v.value)
                 setPackageProfit(profit)
                 setPlanDetails(v.details)
+                setAmountToDeposit()
             }
         })
 
