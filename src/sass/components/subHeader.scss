@@ -252,10 +252,16 @@
     }
 
     &__link--auth {
+       // height: 5.2rem;
+        background-color: white;
+        padding: .5rem 0;
+
+        @include respond(phone){
+          //  height: fit-content;
+        }
 
         &:visited,
         &:link {
-            background-color: white;
             color: $color-secondary;
             margin: 1rem 0;
             border-radius: 10rem;
