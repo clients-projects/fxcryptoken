@@ -143,7 +143,7 @@ function Deposit(props) {
         options.map((v) => {
             if (v.value === selectedPackage) {
                 console.log({ v })
-                const profit = amountToDeposit * (v.details.percent / 100)
+                const profit = (v.details.percent / 100)
                 console.log({profit})
 
                 setPackageName(v.value)
