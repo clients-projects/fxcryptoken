@@ -44,27 +44,72 @@ function Deposit(props) {
         {
             label: 'PROFESSION ($10,000 - $49,999) - Daily',
             value: 'PROFESSIONAL',
+            details: {
+                name: 'GOLD',
+                percent: 3,
+                hours: 24,
+                minimum: 5000,
+                maximum: 9999,
+            },
         },
 
         { label: 'HELM ($300 - $4,999) - Weekly', value: 'HELM', details: {
-            
-        } },
-        { label: 'PREMIUM ($5000 - $9,999) - Weekly', value: 'PREMIUM', details: {
-            
-        } },
-        { label: 'BUSINESS ($10,000 - $49,999) - Weekly', value: 'BUSINESS', details: {
-            
-        } },
+                name: 'GOLD',
+                percent: 3,
+                hours: 24,
+                minimum: 5000,
+                maximum: 9999,} },
+        {
+            label: 'PREMIUM ($5000 - $9,999) - Weekly',
+            value: 'PREMIUM',
+            details: {
+                name: 'GOLD',
+                percent: 3,
+                hours: 24,
+                minimum: 5000,
+                maximum: 9999,},
+        },
+        {
+            label: 'BUSINESS ($10,000 - $49,999) - Weekly',
+            value: 'BUSINESS',
+            details: {
+                name: 'GOLD',
+                percent: 3,
+                hours: 24,
+                minimum: 5000,
+                maximum: 9999,},
+        },
 
-        { label: 'SILVER ($300 - $4,999) - Monthly', value: 'SILVER' , details: {
-            
-        }},
-        { label: 'GOLD ($5000 - $9,999) - Monthly', value: 'GOLD', details: {
-            
-        } },
-        { label: 'DIAMOND ($10,000 - $49,999) - Monthly', value: 'DIAMOND', details: {
-            
-        } },
+        {
+            label: 'SILVER ($300 - $4,999) - Monthly',
+            value: 'SILVER',
+            details: {
+                name: 'GOLD',
+                percent: 3,
+                hours: 24,
+                minimum: 5000,
+                maximum: 9999,},
+        },
+        {
+            label: 'GOLD ($5000 - $9,999) - Monthly',
+            value: 'GOLD',
+            details: {
+                name: 'GOLD',
+                percent: 3,
+                hours: 24,
+                minimum: 5000,
+                maximum: 9999,},
+        },
+        {
+            label: 'DIAMOND ($10,000 - $49,999) - Monthly',
+            value: 'DIAMOND',
+            details: {
+                name: 'GOLD',
+                percent: 3,
+                hours: 24,
+                minimum: 5000,
+                maximum: 9999,},
+        },
     ]
 
     const customStyles = {
