@@ -5,14 +5,9 @@ function PlanConfirmation(props) {
     let {
         name,
         percent,
-        hours
+        duration
     } = props.location.state.planDetails
-
-    let duration = 'hours'
-    if(name === 'Plan 4'){
-        hours = 7
-        duration = 'days'
-    }
+      
 
 
     let walletAddress

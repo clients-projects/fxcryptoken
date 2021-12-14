@@ -184,24 +184,6 @@ function Deposit(props) {
         }
     }
 
-    // useEffect(() => {
-    //     switch (packageName) {
-    //         case 'STARTER':
-    //             setPlanDetails({
-    //                 name: 'STARTER',
-    //                 percent: 2,
-    //                 hours: 24,
-    //                 minimum: 300,
-    //                 maximum: 4999,
-    //             })
-    //             break
-            
-
-    //         default:
-    //             setPlanDetails({})
-    //             break
-    //     }
-    // }, [packageName])
 
     useEffect(() => {
         if (props.adminData) {
