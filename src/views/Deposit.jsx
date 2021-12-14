@@ -144,33 +144,10 @@ function Deposit(props) {
             if (v.value === selectedPackage) {
                 console.log({ v })
 
+                setPackageName(v.value)
+                setPackageProfit(amountToDeposit * (v.details.percent / 100))
             }
         })
-
-        if (selectedPackage === 'STARTER') {
-            setPackageName('STARTER')
-            setPackageProfit(amountToDeposit * 0.02)
-        }
-        if (selectedPackage === 'GOLD') {
-            setPackageName('GOLD')
-
-            setPackageProfit(amountToDeposit * 0.03)
-        }
-        if (selectedPackage === 'DIAMOND') {
-            setPackageName('DIAMOND')
-
-            setPackageProfit(amountToDeposit * 0.04)
-        }
-        if (selectedPackage === 'MASTER') {
-            setPackageName('MASTER')
-
-            setPackageProfit(amountToDeposit * 0.06)
-        }
-        if (selectedPackage === 'DIAMOND') {
-            setPackageName('DIAMOND')
-
-            setPackageProfit(amountToDeposit * 0.1)
-        }
     }
 
     const onAmountChange = (e) => {
