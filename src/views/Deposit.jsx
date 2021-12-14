@@ -316,6 +316,7 @@ function Deposit(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log({packageName})
         const formData = {
             packageName,
             amountToDeposit: Math.floor(amountToDeposit),
@@ -334,7 +335,7 @@ function Deposit(props) {
             setMessage('')
 
             if (!error) {
-                props.onInitInvestNow(formData, props.tokenId)
+              //  props.onInitInvestNow(formData, props.tokenId)
 
                 props.history.push('/admin/plan-confirmation/:' + packageName, {
                     ...formData,
