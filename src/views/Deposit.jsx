@@ -393,6 +393,7 @@ function Deposit(props) {
                         value={amountToDeposit || ''}
                         onChange={onAmountChange}
                         min={planDetails.minimum}
+                        max={planDetails.maximum}
                     />
 
                     <h2
