@@ -25,7 +25,7 @@ function Deposit(props) {
             details: {
                 name: 'SILVER',
                 percent: 2,
-                hours: 24,
+                duration: '24hrs',
                 minimum: 300,
                 maximum: 4999,
             },
@@ -36,7 +36,7 @@ function Deposit(props) {
             details: {
                 name: 'AMATEUR',
                 percent: 3,
-                hours: 24,
+                duration: '24hrs',
                 minimum: 5000,
                 maximum: 9999,
             },
@@ -47,7 +47,7 @@ function Deposit(props) {
             details: {
                 name: 'PROFESSIONAL',
                 percent: 4,
-                hours: 24,
+                duration: '24hrs',
                 minimum: 10000,
                 maximum: 49999,
             },
@@ -59,7 +59,7 @@ function Deposit(props) {
             details: {
                 name: 'HELM',
                 percent: 10,
-                Days: 7,
+                duration: '1 week',
                 minimum: 300,
                 maximum: 4999,
             },
@@ -70,7 +70,7 @@ function Deposit(props) {
             details: {
                 name: 'PREMIUM',
                 percent: 15,
-                days: 7,
+                duration: '1 week',
                 minimum: 5000,
                 maximum: 9999,
             },
@@ -81,7 +81,7 @@ function Deposit(props) {
             details: {
                 name: 'BUSINESS',
                 percent: 20,
-                days: 7,
+                duration: '1 week',
                 minimum: 10000,
                 maximum: 49999,
             },
@@ -92,10 +92,10 @@ function Deposit(props) {
             value: 'SILVER',
             details: {
                 name: 'SILVER',
-                percent: 3,
-                hours: 24,
-                minimum: 5000,
-                maximum: 9999,
+                percent: 44,
+                duration: '1 month',
+                minimum: 300,
+                maximum: 4999,
             },
         },
         {
@@ -103,8 +103,8 @@ function Deposit(props) {
             value: 'GOLD',
             details: {
                 name: 'GOLD',
-                percent: 3,
-                hours: 24,
+                percent: 52,
+                duration: '1 month',
                 minimum: 5000,
                 maximum: 9999,
             },
@@ -113,11 +113,11 @@ function Deposit(props) {
             label: 'DIAMOND ($10,000 - $49,999) - Monthly',
             value: 'DIAMOND',
             details: {
-                name: 'GOLD',
-                percent: 3,
-                hours: 24,
-                minimum: 5000,
-                maximum: 9999,
+                name: 'DIAMOND',
+                percent: 64,
+                duration: '1 month',
+                minimum: 10000,
+                maximum: 49999,
             },
         },
     ]
@@ -139,14 +139,11 @@ function Deposit(props) {
             selectedPackage = newValue.value
         }
 
-        console.log({ selectedPackage })
-
-        console.log({ options })
 
         options.map((v) => {
-            console.log(v.value)
             if (v.value === selectedPackage) {
                 console.log({ v })
+
             }
         })
 
@@ -395,6 +392,7 @@ function Deposit(props) {
                         id='amount'
                         value={amountToDeposit || ''}
                         onChange={onAmountChange}
+                        min={2000}
                     />
 
                     <h2
