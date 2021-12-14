@@ -82,8 +82,8 @@ function Deposit(props) {
                 name: 'BUSINESS',
                 percent: 20,
                 days: 7,
-                minimum: 5000,
-                maximum: 9999,
+                minimum: 10000,
+                maximum: 49999,
             },
         },
 
@@ -91,7 +91,7 @@ function Deposit(props) {
             label: 'SILVER ($300 - $4,999) - Monthly',
             value: 'SILVER',
             details: {
-                name: 'GOLD',
+                name: 'SILVER',
                 percent: 3,
                 hours: 24,
                 minimum: 5000,
