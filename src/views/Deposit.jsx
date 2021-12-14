@@ -134,13 +134,19 @@ function Deposit(props) {
     }
 
     const onPackageChange = (newValue) => {
+        console.log('package change', newValue.value)
         let selectedPackage = ''
         if (newValue) {
             selectedPackage = newValue.value
         }
 
 
-       
+        options.map((v) => {
+            if (v.value === selectedPackage) {
+                console.log({ v })
+
+            }
+        })
 
         if (selectedPackage === 'SILVER') {
             setPackageName('SILVER')
