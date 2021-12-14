@@ -193,9 +193,8 @@ function Deposit(props) {
         if (props.userData.hasOwnProperty('username')) {
             
             let keepProfits = 0
-            console.log(props.userDeposits)
 
-            props.userDeposits.map((p) => {
+            props.totalUserDeposits.map((p) => {
                 keepProfits += p.profit
             })
 

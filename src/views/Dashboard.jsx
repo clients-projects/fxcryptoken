@@ -31,7 +31,6 @@ const Dashboard = (props) => {
         if(props.userData.hasOwnProperty('username')){
 
             let keepProfits = 0
-            console.log(props.userDeposits)
 
             props.userDeposits.map((p) => {
                 keepProfits += p.profit
