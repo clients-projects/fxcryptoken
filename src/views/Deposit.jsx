@@ -140,12 +140,7 @@ function Deposit(props) {
         }
 
 
-        options.map((v) => {
-            if (v.value === selectedPackage) {
-                console.log({ v })
-
-            }
-        })
+       
 
         if (selectedPackage === 'SILVER') {
             setPackageName('SILVER')
