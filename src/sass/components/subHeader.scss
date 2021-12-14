@@ -252,13 +252,10 @@
     }
 
     &__link--auth {
-       // height: 5.2rem;
         background-color: white;
         padding: .5rem 2rem !important;
 
-        @include respond(phone){
-          //  height: fit-content;
-        }
+       
 
         &:visited,
         &:link {
