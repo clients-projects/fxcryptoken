@@ -194,14 +194,16 @@ function Deposit(props) {
             
             let keepProfits = 0
 
-            props.totalUserDeposits.map((p) => {
-                keepProfits += p.profit
-            })
+            console.log('total user deposits', props.totalUserDeposits)
 
-            const accountBalandProfits =
-                props.userData.accountBalance + keepProfits
+            // props.totalUserDeposits.map((p) => {
+            //     keepProfits += p.profit
+            // })
 
-            setUserAccountBalance(accountBalandProfits)
+            // const accountBalandProfits =
+            //     props.userData.accountBalance + keepProfits
+
+            // setUserAccountBalance(accountBalandProfits)
         }
     }, [props])
 
