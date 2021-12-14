@@ -140,6 +140,8 @@ function Deposit(props) {
             selectedPackage = newValue.value
         }
 
+        console.log({selectedPackage})
+
 
         options.map((v) => {
             if (v.value === selectedPackage) {
@@ -148,8 +150,8 @@ function Deposit(props) {
             }
         })
 
-        if (selectedPackage === 'SILVER') {
-            setPackageName('SILVER')
+        if (selectedPackage === 'STARTER') {
+            setPackageName('STARTER')
             setPackageProfit(amountToDeposit * 0.02)
         }
         if (selectedPackage === 'GOLD') {
