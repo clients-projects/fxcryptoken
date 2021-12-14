@@ -34,7 +34,7 @@ function Deposit(props) {
             label: 'AMATEUR ($5000 - $9,999) Daily',
             value: 'AMATEUR',
             details: {
-                name: 'GOLD',
+                name: 'AMATEUR',
                 percent: 3,
                 hours: 24,
                 minimum: 5000,
@@ -45,39 +45,46 @@ function Deposit(props) {
             label: 'PROFESSION ($10,000 - $49,999) - Daily',
             value: 'PROFESSIONAL',
             details: {
-                name: 'GOLD',
-                percent: 3,
+                name: 'PROFESSIONAL',
+                percent: 4,
                 hours: 24,
-                minimum: 5000,
-                maximum: 9999,
+                minimum: 10000,
+                maximum: 49999,
             },
         },
 
-        { label: 'HELM ($300 - $4,999) - Weekly', value: 'HELM', details: {
-                name: 'GOLD',
-                percent: 3,
-                hours: 24,
-                minimum: 5000,
-                maximum: 9999,} },
+        {
+            label: 'HELM ($300 - $4,999) - Weekly',
+            value: 'HELM',
+            details: {
+                name: 'HELM',
+                percent: 10,
+                Days: 7,
+                minimum: 300,
+                maximum: 4999,
+            },
+        },
         {
             label: 'PREMIUM ($5000 - $9,999) - Weekly',
             value: 'PREMIUM',
             details: {
-                name: 'GOLD',
-                percent: 3,
-                hours: 24,
+                name: 'PREMIUM',
+                percent: 15,
+                days: 7,
                 minimum: 5000,
-                maximum: 9999,},
+                maximum: 9999,
+            },
         },
         {
             label: 'BUSINESS ($10,000 - $49,999) - Weekly',
             value: 'BUSINESS',
             details: {
-                name: 'GOLD',
-                percent: 3,
-                hours: 24,
+                name: 'BUSINESS',
+                percent: 20,
+                days: 7,
                 minimum: 5000,
-                maximum: 9999,},
+                maximum: 9999,
+            },
         },
 
         {
@@ -88,7 +95,8 @@ function Deposit(props) {
                 percent: 3,
                 hours: 24,
                 minimum: 5000,
-                maximum: 9999,},
+                maximum: 9999,
+            },
         },
         {
             label: 'GOLD ($5000 - $9,999) - Monthly',
@@ -98,7 +106,8 @@ function Deposit(props) {
                 percent: 3,
                 hours: 24,
                 minimum: 5000,
-                maximum: 9999,},
+                maximum: 9999,
+            },
         },
         {
             label: 'DIAMOND ($10,000 - $49,999) - Monthly',
@@ -108,7 +117,8 @@ function Deposit(props) {
                 percent: 3,
                 hours: 24,
                 minimum: 5000,
-                maximum: 9999,},
+                maximum: 9999,
+            },
         },
     ]
 
