@@ -170,8 +170,7 @@ function SubHeader(props) {
                 </div>
 
                 <IoLogoWhatsapp className='subHeader__contact--logo' />
-                <p className='subHeader__contact--text'>+18589463698</p>
-
+                <p className='subHeader__contact--text'>+14049071212</p>
 
                 <MdEmail className='subHeader__contact--logo' />
                 <p className='subHeader__contact--text'>
