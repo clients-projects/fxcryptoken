@@ -34,7 +34,8 @@ function HowToBuyBitcoin() {
                         <span>First Video:</span> How to use Bitcoin ATM: step
                         by step
                     </p>
-                    <video width='320' height='240' controls>
+                    
+                    <video width='320' height='240' controls style={{marginTop: '2rem'}}>
                         <source src={vd2} type='video/mp4' />
                         Your browser does not support the video tag.
                     </video>{' '}
