@@ -15,6 +15,10 @@ function HowToBuyBitcoin() {
                     <h3 className='heading-3 about__heading'>
                         Welcome to fxcryptotokeninvestment
                     </h3>
+                    <video width='320' height='240' controls>
+                        <source src={vd1} type='video/mp4' />
+                        Your browser does not support the video tag.
+                    </video>{' '}
                     <p className='about__text'>
                         fxcryptotokeninvestment.com is one of the largest crypto
                         investment. We have been servicing our clients since
