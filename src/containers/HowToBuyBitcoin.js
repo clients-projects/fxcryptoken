@@ -26,22 +26,22 @@ function HowToBuyBitcoin() {
                         video for a clear understanding, if you have any
                         questions or suggestions please do well to contact us
                     </p>
+                    <video width='320' height='240' controls>
+                        <source src={vd1} type='video/mp4' />
+                        Your browser does not support the video tag.
+                    </video>{' '}
                     <p className='about__text' style={{ marginBottom: '0' }}>
                         <span>First Video:</span> How to use Bitcoin ATM: step
                         by step
                     </p>
                     <video width='320' height='240' controls>
-                        <source src={vd1} type='video/mp4' />
+                        <source src={vd2} type='video/mp4' />
                         Your browser does not support the video tag.
                     </video>{' '}
                     <p className='about__text' style={{ marginBottom: '0' }}>
                         <span>Second Video:</span> How to buy Bitcoin on Cash
                         App instantly
                     </p>
-                    <video width='320' height='240' controls>
-                        <source src={vd2} type='video/mp4' />
-                        Your browser does not support the video tag.
-                    </video>{' '}
                 </div>
 
                 <div className='about__cryptoMarket'>
