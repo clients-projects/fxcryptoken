@@ -12,7 +12,7 @@ function HowToBuyBitcoin() {
 
             <div className='about'>
                 <h2 className='heading-2 about__header'>HOW TO BUY BITCOIN</h2>
-                <div className='about__content'>
+                <div>
                     <h3 className='heading-3 about__heading'>
                         Why these videos
                     </h3>
@@ -24,10 +24,9 @@ function HowToBuyBitcoin() {
                         help you to buy bitcoins without any prior knowledge of
                         the crypto world, Please try watching to the end of each
                         video for a clear understanding, if you have any
-                        questions or suggestions please do well to{' '}
-                        <Link to='contact-us'>contact us</Link>
+                        questions or suggestions please do well to contact us
                     </p>
-                    <p className='about__text'>
+                    <p className='about__text' style={{ marginBottom: '0' }}>
                         <span>First Video:</span> How to use Bitcoin ATM: step
                         by step
                     </p>
@@ -35,9 +34,9 @@ function HowToBuyBitcoin() {
                         <source src={vd1} type='video/mp4' />
                         Your browser does not support the video tag.
                     </video>{' '}
-                    <p className='about__text'>
-                        <span>First Video:</span> How to buy Bitcoin on Cash App
-                        instantly
+                    <p className='about__text' style={{ marginBottom: '0' }}>
+                        <span>Second Video:</span> How to buy Bitcoin on Cash
+                        App instantly
                     </p>
                     <video width='320' height='240' controls>
                         <source src={vd2} type='video/mp4' />
