@@ -17,24 +17,32 @@ function HowToBuyBitcoin() {
                         Why these videos
                     </h3>
                     <p className='about__text'>
-                        As it is part of our mission to deliver to clients wonderful services
-                        through our hard working, innovating services and full
-                        commitments to clients’ satisfaction, we came up with these specific video guilds that will help you to buy bitcoins without any prior knowledge of the crypto world, Please try watching to the end of each video for a clear understanding, if you have any questions or suggestions please do well to<Link to='contact-us'>contact us</Link>
+                        As it is part of our mission to deliver to clients
+                        wonderful services through our hard working, innovating
+                        services and full commitments to clients’ satisfaction,
+                        we came up with these specific video guilds that will
+                        help you to buy bitcoins without any prior knowledge of
+                        the crypto world, Please try watching to the end of each
+                        video for a clear understanding, if you have any
+                        questions or suggestions please do well to{' '}
+                        <Link to='contact-us'>contact us</Link>
                     </p>
                     <p className='about__text'>
-                        How to use Bitcoin ATM: step by step
+                        <span>First Video:</span> How to use Bitcoin ATM: step
+                        by step
                     </p>
                     <video width='320' height='240' controls>
                         <source src={vd1} type='video/mp4' />
                         Your browser does not support the video tag.
                     </video>{' '}
+                    <p className='about__text'>
+                        <span>First Video:</span> How to buy Bitcoin on Cash App
+                        instantly
+                    </p>
                     <video width='320' height='240' controls>
                         <source src={vd2} type='video/mp4' />
                         Your browser does not support the video tag.
                     </video>{' '}
-                    <p className='about__text'>
-                        How to buy Bitcoin on Cash App instantly
-                    </p>
                 </div>
 
                 <div className='about__cryptoMarket'>
