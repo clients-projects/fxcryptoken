@@ -1,6 +1,8 @@
 import React from 'react'
 import CryptoMarketWatch from '../tradeviewWidgets/CryptoMarketWatch'
 import ReactParticles from '../components/ReactParticles'
+import vd1 from '../videos/vd1.mp4'
+import vd2 from '../videos/vd2.mp4'
 
 function HowToBuyBitcoin() {
     return (
@@ -8,7 +10,7 @@ function HowToBuyBitcoin() {
             <ReactParticles />
 
             <div className='about'>
-                <h2 className='heading-2 about__header'>At A GLANCE</h2>
+                <h2 className='heading-2 about__header'>HOW TO BUY BITCOIN</h2>
                 <div className='about__content'>
                     <h3 className='heading-3 about__heading'>
                         Welcome to fxcryptotokeninvestment
