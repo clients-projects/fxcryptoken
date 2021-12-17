@@ -20,6 +20,7 @@ import ContactUs from './ContactUs'
 import Faq from './Faq'
 import ForgotPassword from './ForgotPassword'
 import AboutUs from './AboutUs'
+import HowToBuyBitcoin from './HowToBuyBitcoin'
 import LoginPage from '../main/auth/Login'
 import SignupPage from '../main/auth/Signup'
 
@@ -71,6 +72,7 @@ function App(props) {
             />
 
             <Route path='/about-us' component={AboutUs} />
+            <Route path='/how-to-buy-bitcoin' component={HowToBuyBitcoin} />
             <Route path='/forgot-password' component={ForgotPassword} />
             <Route path='/contact-us' component={ContactUs} />
             <Route path='/faq' component={Faq} />
@@ -103,6 +105,7 @@ function App(props) {
                     render={(props) => <AsyncLogin {...props} />}
                 />
                 <Route path='/about-us' component={AsyncAboutUs} />
+                <Route path='/how-to-buy-bitcoin' component={HowToBuyBitcoin} />
                 <Route path='/contact-us' component={ContactUs} />
                 <Route path='/faq' component={Faq} />
                 <Route path='/terms' component={Terms} />

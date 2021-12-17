@@ -135,7 +135,7 @@ function SubHeader(props) {
                         </li>
                         <li className='navigation__item'>
                             <Link
-                                to='/about-us'
+                                to='/how-to-buy-bitcoin'
                                 className='navigation__link'
                                 onClick={() => {
                                     collapseMenu()
@@ -204,7 +204,10 @@ function SubHeader(props) {
                     <Link to='/about-us' className='subHeader__list--item'>
                         <li>About</li>
                     </Link>
-                    <Link to='/about-us' className='subHeader__list--item'>
+                    <Link
+                        to='/how-to-buy-bitcoin'
+                        className='subHeader__list--item'
+                    >
                         <li>How to buy Bitcoin</li>
                     </Link>
                     <Link to='/faq' className='subHeader__list--item'>
