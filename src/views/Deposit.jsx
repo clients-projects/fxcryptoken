@@ -23,7 +23,7 @@ function Deposit(props) {
             label: 'STARTER ($300 - $4,999) - Daily',
             value: 'STARTER',
             details: {
-                name: 'SILVER',
+                name: 'STARTER',
                 percent: 2,
                 duration: '24hrs',
                 minimum: 300,
@@ -42,7 +42,7 @@ function Deposit(props) {
             },
         },
         {
-            label: 'PROFESSION ($10,000 - $49,999) - Daily',
+            label: 'PROFESSIONAL ($10,000 - $49,999) - Daily',
             value: 'PROFESSIONAL',
             details: {
                 name: 'PROFESSIONAL',
@@ -222,7 +222,7 @@ function Deposit(props) {
             setMessage('')
 
             if (!error) {
-                //  props.onInitInvestNow(formData, props.tokenId)
+                 props.onInitInvestNow(formData, props.tokenId)
 
                 props.history.push('/admin/plan-confirmation/:' + packageName, {
                     ...formData,
