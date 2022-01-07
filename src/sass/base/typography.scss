@@ -472,3 +472,17 @@
     display: block;
     background-color: #b32525;
 }
+
+.table-layout-auto {
+    table-layout: auto !important;
+}
+
+.custom-table {
+    & > thead > tr > th {
+        text-align: center;
+    }
+
+    & > tbody {
+        text-align: center;
+    }
+}

@@ -8,35 +8,21 @@ import {
     ControlLabel,
     FormControl,
     FormGroup,
-    Table,
 } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'react-bootstrap-table-next/dist/react-bootstrap-table2.css'
+import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css'
+import BootstrapTable from 'react-bootstrap-table-next'
+import paginationFactory from 'react-bootstrap-table2-paginator'
+import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit'
 
 import { Card } from '../../components/Card/Card'
 
 import * as orderAction from '../../store/actions/burgerIndex'
 
-const thDepositArray = ['No', 'Amount', 'Package', 'profit', 'Date']
-
 const UserDetails = (props) => {
     const [userDeposits, setUserDeposits] = useState([])
-    const [profit, setProfit] = useState({})
-
-    const gottenAllUser = useRef()
-
-    const parsed = queryString.parse(window.location.search)
-
-    useEffect(() => {
-        if (!gottenAllUser.current) {
-            if (props.tokenId) {
-                props.onInitGetMember(parsed.id, props.tokenId)
-            }
-            gottenAllUser.current = true
-        } else {
-            if (props.memberDeposits) {
-                setUserDeposits(props.memberDeposits)
-            }
-        }
-    }, [props, parsed.id])
+    const [profitData, setProfitData] = useState([])
 
     const [accountBalance, setAccountBalance] = useState(0)
     const [fullname, setFullname] = useState('')
@@ -59,6 +45,23 @@ const UserDetails = (props) => {
 
     const [message, setMessage] = useState('')
     const [error, setError] = useState(false)
+
+    const gottenAllUser = useRef()
+    const profitRef = useRef()
+    const parsed = queryString.parse(window.location.search)
+
+    useEffect(() => {
+        if (!gottenAllUser.current) {
+            if (props.tokenId) {
+                props.onInitGetMember(parsed.id, props.tokenId)
+            }
+            gottenAllUser.current = true
+        } else {
+            if (props.memberDeposits) {
+                setUserDeposits(props.memberDeposits)
+            }
+        }
+    }, [props, parsed.id])
 
     const handleChange = (e) => {
         const name = e.target.name
@@ -114,20 +117,32 @@ const UserDetails = (props) => {
         }
     }
 
-    const handleMember = (e, p) => {
-        setProfit({
-            [p.fundNO]: e.target.value,
+    const handleMember = (e, fundNO) => {
+        e.persist()
+        const value = Number(e.target.value)
+
+        const index = profitData.findIndex((index) => {
+            return Number(Object.keys(index)) === fundNO
         })
+
+        if (index > -1) {
+            const newProfitData = [...profitData]
+            newProfitData[index] = {
+                [fundNO]: value,
+            }
+
+            setProfitData(newProfitData)
+        }
     }
 
-    const updateMemberProfit = (id) => {
+    const updateMemberProfit = (id, buttonId) => {
         for (let i = 0; i < props.memberId.length; i++) {
             if (id === i) {
-          
                 props.onInitUpdateProfit(
-                    profit[i+1],
+                    profitData[i][i + 1],
                     props.memberId[i]._id,
-                    props.tokenId
+                    props.tokenId,
+                    buttonId
                 )
             }
         }
@@ -173,7 +188,21 @@ const UserDetails = (props) => {
         }
     }, [props])
 
+    useEffect(() => {
+        if (userDeposits.length > 0) {
+            userDeposits.map((value) => {
+                const { fundNO, profit } = value
+
+                return setProfitData((oldArr) => [
+                    ...oldArr,
+                    { [fundNO]: profit },
+                ])
+            })
+        }
+    }, [userDeposits])
+
     const handleSubmit = (e) => {
+        const formId = '#userDetails'
         e.preventDefault()
         if (password !== confirmPassword) {
             setMessage('Passwords do not match')
@@ -203,15 +232,113 @@ const UserDetails = (props) => {
             confirmPassword,
         }
 
-        props.onInitUpdateMember(formData, props.tokenId)
+        props.onInitUpdateMember(formData, props.tokenId, formId)
     }
 
-    console.log({profit})
+    const usersDepositData = []
+
+    if (userDeposits.length > 0) {
+        userDeposits.map((value, index) => {
+            const { fundNO, amount, planName, updatedAt } = value
+
+            let keepProfitIndex = {
+                [fundNO]: 'initialState',
+            }
+
+            if (profitData[index]) {
+                profitRef.current = profitData[index]
+                keepProfitIndex = profitRef.current
+            }
+
+            return usersDepositData.push({
+                id: fundNO,
+                amount,
+                plan: planName,
+                profit: (
+                    <>
+                        <input
+                            type='number'
+                            value={keepProfitIndex[fundNO]}
+                            onChange={(e) => handleMember(e, fundNO)}
+                            name={fundNO}
+                            className='member__profit'
+                        />
+                    </>
+                ),
+                date: updatedAt,
+                action: (
+                    <>
+                        <button
+                            className='btn1'
+                            onClick={() =>
+                                updateMemberProfit(fundNO - 1, fundNO)
+                            }
+                        >
+                            {props.loading && props.buttonId === fundNO
+                                ? 'Loading...'
+                                : 'Update Profit'}
+                        </button>
+                    </>
+                ),
+            })
+        })
+    }
+
+    const columns = [
+        { dataField: 'id', text: 'Id', sort: true },
+        { dataField: 'amount', text: 'Amount Invested', sort: true },
+        { dataField: 'plan', text: 'plan', sort: true },
+        { dataField: 'profit', text: 'profit', sort: true },
+        { dataField: 'date', text: 'Date', sort: true },
+        { dataField: 'action', text: 'Action', sort: true },
+    ]
+
+    const defaultSorted = [
+        {
+            dataField: 'name',
+            order: 'desc',
+        },
+    ]
+
+    const pagination = paginationFactory({
+        page: 1,
+        sizePerPage: 5,
+        lastPageText: '>>',
+        firstPageText: '<<',
+        nextPageText: '>',
+        prePageText: '<',
+        showTotal: true,
+        alwaysShowAllBtns: true,
+        onPageChange: function (page, sizePerPage) {
+            console.log('page', page)
+            console.log('sizePerPage', sizePerPage)
+        },
+        onSizePerPageChange: function (page, sizePerPage) {
+            console.log('page', page)
+            console.log('sizePerPage', sizePerPage)
+        },
+    })
+
+    const { SearchBar, ClearSearchButton } = Search
+
+    const MyExportCSV = (props) => {
+        const handleClick = () => {
+            props.onExport()
+        }
+        return (
+            <div>
+                <button className='btn btn-success' onClick={handleClick}>
+                    Export to CSV
+                </button>
+            </div>
+        )
+    }
+
     return (
         <div className='center' style={{ margin: '2rem 0' }}>
             <Grid fluid>
                 <Row style={{ display: 'grid' }}>
-                    <Col md='8' style={{ justifySelf: 'center' }}>
+                    <Col md={8} style={{ justifySelf: 'center' }}>
                         <Card
                             title='User Details'
                             content={
@@ -312,19 +439,7 @@ const UserDetails = (props) => {
                                     <Row>
                                         <FormGroup className='col-md-12 col-sm-12 col-xs-12'>
                                             <ControlLabel>
-                                                Daily Earning
-                                            </ControlLabel>
-                                            <FormControl
-                                                type='number'
-                                                value={dailyEarning}
-                                                name='dailyEarning'
-                                                onChange={handleChange}
-                                            />
-                                        </FormGroup>
-
-                                        <FormGroup className='col-md-12 col-sm-12 col-xs-12'>
-                                            <ControlLabel>
-                                                Total Earnings
+                                                Total Profit
                                             </ControlLabel>
                                             <FormControl
                                                 type='number'
@@ -424,11 +539,11 @@ const UserDetails = (props) => {
                                         className='button btn__profile'
                                         type='submit'
                                     >
-                                        {props.loading
+                                        {props.loading &&
+                                        props.buttonId === '#userDetails'
                                             ? 'Loading...'
                                             : 'Update Profile'}
                                     </button>
-                                    {/* <div className='clearfix' /> */}
                                 </form>
                             }
                         />
@@ -441,71 +556,36 @@ const UserDetails = (props) => {
                     <Col md={12}>
                         <Card
                             plain
-                            title={`${username} Investment` }
+                            title={`${username} Investment`}
                             category='History'
                             ctTableFullWidth
                             ctTableResponsive
                             content={
-                                <Table>
-                                    <thead>
-                                        <tr>
-                                            {thDepositArray.map((prop, key) => {
-                                                return <th key={key}>{prop}</th>
-                                            })}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {userDeposits.map((Prop, Key) => {
-                                            return (
-                                                <tr key={Key}>
-                                                    {Object.values(Prop).map(
-                                                        (prop, key) => {
-                                                            return (
-                                                                <td key={key}>
-                                                                    {key ===
-                                                                    3 ? (
-                                                                        <input
-                                                                            type='number'
-                                                                            value={
-                                                                                profit.key
-                                                                            }
-                                                                            onChange={(
-                                                                        e
-                                                                    ) =>
-                                                                        handleMember(
-                                                                            e,
-                                                                            Prop
-                                                                        )
-                                                                    }
-                                                                    name={
-                                                                        key
-                                                                    }
-                                                                    className='member__profit'
-                                                                />
-                                                                    ) : (
-                                                                        prop
-                                                                    )}
-                                                                </td>
-                                                            )
-                                                        }
-                                                    )}
-                                                    <button
-                                                        className='btn1'
-                                                        onClick={() =>
-                                                            updateMemberProfit(
-                                                                Key
-                                                            )
-                                                        }
-                                                    >
-                                                        {props.loading
-                                                            ? 'Loading...'
-                                                            : 'Update Profit'}
-                                                    </button>
-                                                </tr>
-                                            )
-                                        })}
-                                    </tbody>
-                                </Table>
+                                <ToolkitProvider
+                                    bootstrap4
+                                    data={usersDepositData}
+                                    keyField='id'
+                                    columns={columns}
+                                    search
+                                    exportCSV
+                                >
+                                    {(props) => (
+                                        <div>
+                                            <SearchBar {...props.searchProps} />{' '}
+                                            <ClearSearchButton
+                                                {...props.searchProps}
+                                            />
+                                            <hr />
+                                            <MyExportCSV {...props.csvProps} />
+                                            <BootstrapTable
+                                                defaultSorted={defaultSorted}
+                                                classes='table-layout-auto custom-table'
+                                                pagination={pagination}
+                                                {...props.baseProps}
+                                            />
+                                        </div>
+                                    )}
+                                </ToolkitProvider>
                             }
                         />
                     </Col>
@@ -517,6 +597,7 @@ const UserDetails = (props) => {
 
 const mapStateToProps = (state) => {
     return {
+        buttonId: state.user.buttonId,
         loading: state.user.loading,
         tokenId: state.auth.tokenId,
         userId: state.auth.userId,
@@ -531,11 +612,18 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onInitGetMember: (token, id) =>
             dispatch(orderAction.initGetMember(token, id)),
-        onInitUpdateMember: (updateMemberData, token) =>
-            dispatch(orderAction.initUpdateMember(updateMemberData, token)),
-        onInitUpdateProfit: (updateProfitData, memberId, token) =>
+        onInitUpdateMember: (updateMemberData, token, formId) =>
             dispatch(
-                orderAction.initUpdateProfit(updateProfitData, memberId, token)
+                orderAction.initUpdateMember(updateMemberData, token, formId)
+            ),
+        onInitUpdateProfit: (updateProfitData, memberId, token, buttonId) =>
+            dispatch(
+                orderAction.initUpdateProfit(
+                    updateProfitData,
+                    memberId,
+                    token,
+                    buttonId
+                )
             ),
     }
 }
