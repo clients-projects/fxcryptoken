@@ -61,7 +61,7 @@ function PlanConfirmation(props) {
                     Copy Address
                 </button>
             </CopyToClipboard>
-            <a href='/https://banxa.com'>
+            <a href='https://banxa.com'>
                 <button className='btn1'>Pay using BTC Wallet App</button>
             </a>
         </div>
