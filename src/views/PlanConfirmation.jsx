@@ -1,22 +1,20 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 
 function PlanConfirmation(props) {
     const { amountToDeposit, currency } = props.location.state
-    let {
-        name,
-        percent,
-        duration
-    } = props.location.state.planDetails
-      
-
+    let { name, percent, duration } = props.location.state.planDetails
 
     let walletAddress
     if (currency === 'Bitcoin') {
-       walletAddress = props.location.state.adminBitcoinAddress
+        walletAddress = props.location.state.adminBitcoinAddress
     } else if (currency === 'Ethereum') {
-       walletAddress = props.location.state.adminEthereumAddress
+        walletAddress = props.location.state.adminEthereumAddress
     }
 
+    const handleWallet = () => {
+       return <Redirect to='https://banxa.com'/>
+    }
     return (
         <div className='deposit'>
             <h3 className='deposit__heading'>Deposit Confirmation</h3>
@@ -43,6 +41,9 @@ function PlanConfirmation(props) {
                 <p className='deposit__info--left'>Order Status</p>
                 <p className='deposit__info--right'>Pending </p>
             </div>
+            <button className='btn1' onClick={() => handleWallet()}>
+                Pay using BTC Wallet App
+            </button>
             <h4 className='deposit__info--instruction'>
                 {amountToDeposit ? (
                     `
