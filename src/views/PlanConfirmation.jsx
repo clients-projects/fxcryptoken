@@ -1,7 +1,6 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-
 
 function PlanConfirmation(props) {
     const { amountToDeposit, currency } = props.location.state
@@ -14,10 +13,6 @@ function PlanConfirmation(props) {
         walletAddress = props.location.state.adminEthereumAddress
     }
 
-    const handleWallet = () => {
-        console.log('clicked')
-       return <Redirect to='https://banxa.com'/>
-    }
     return (
         <div className='deposit'>
             <h3 className='deposit__heading'>Deposit Confirmation</h3>
@@ -63,12 +58,12 @@ function PlanConfirmation(props) {
                     className='btn1 referrals__link--btn'
                     data-clipboard-target='#linkRef'
                 >
-                    Copy Link
+                    Copy Address
                 </button>
             </CopyToClipboard>
-            <button className='btn1' onClick={() => handleWallet()}>
-                Pay using BTC Wallet App
-            </button>
+            <a href='/https://banxa.com'>
+                <button className='btn1'>Pay using BTC Wallet App</button>
+            </a>
         </div>
     )
 }
