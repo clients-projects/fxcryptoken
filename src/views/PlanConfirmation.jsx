@@ -1,5 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+
 
 function PlanConfirmation(props) {
     const { amountToDeposit, currency } = props.location.state
@@ -13,6 +15,7 @@ function PlanConfirmation(props) {
     }
 
     const handleWallet = () => {
+        console.log('clicked')
        return <Redirect to='https://banxa.com'/>
     }
     return (
@@ -41,20 +44,31 @@ function PlanConfirmation(props) {
                 <p className='deposit__info--left'>Order Status</p>
                 <p className='deposit__info--right'>Pending </p>
             </div>
-            <button className='btn1' onClick={() => handleWallet()}>
-                Pay using BTC Wallet App
-            </button>
             <h4 className='deposit__info--instruction'>
                 {amountToDeposit ? (
                     `
-                INSTRUCTION: Please send $${amountToDeposit} worth of ${currency} to 
-                "${walletAddress}"`
+                    INSTRUCTION: Please send $${amountToDeposit} worth of ${currency} to 
+                    "${walletAddress}"`
                 ) : (
                     <span style={{ color: '#ff6969' }}>
                         Invalid amount, Please enter an amount
                     </span>
                 )}
             </h4>
+            <CopyToClipboard
+                text={walletAddress}
+                onCopy={() => console.log('copied')}
+            >
+                <button
+                    className='btn1 referrals__link--btn'
+                    data-clipboard-target='#linkRef'
+                >
+                    Copy Link
+                </button>
+            </CopyToClipboard>
+            <button className='btn1' onClick={() => handleWallet()}>
+                Pay using BTC Wallet App
+            </button>
         </div>
     )
 }
